@@ -1,4 +1,5 @@
 <project name="booksmgt" basedir="." default="createjar" >
+	<property name="version" value="1.0"/>
 	<property name="build" value="build"/>
 	<property name="extlibs" value="extlibs"/>
 	<property name="mainclass" value="ro.cuzma.books.ui.BooksManagement"/>
@@ -12,18 +13,19 @@
 		<copy  file="${extlibs}/xerces.jar" todir="${build}"/>
 		<copy  file="${extlibs}/log4j-1.2.14.jar" todir="${build}"/>
 		<copy  file="${extlibs}/tools.jar" todir="${build}"/>
+		<copy  file="${extlibs}/xml-as-db-0.9.jar" todir="${build}"/>
 		<copy  file="all.xml" todir="${build}"/>
 		<copy  file="manageBooks.bat" todir="${build}"/>
 	</target>
 
 		<target name="createjar" depends="init,copylibs">
 		<mkdir dir="build" />
-		<jar destfile="${build}/${ant.project.name}.jar">
+		<jar destfile="${build}/${ant.project.name}-${version}.jar">
 		    <fileset dir="./bin"
 		             excludes="build.xml"
 		    />
  			<manifest>
- 				<attribute name="Class-Path" value="xerces.jar log4j-1.2.14.jar tools.jar xmplib.jar"/>
+ 				<attribute name="Class-Path" value="xerces.jar log4j-1.2.14.jar tools.jar xmplib.jar xml-as-db-0.9.jar"/>
                 <attribute name="Main-Class" value="${mainclass}"/>
             </manifest>
 		 </jar>

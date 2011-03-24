@@ -5,6 +5,6 @@
 	<classpathentry kind="lib" path="extlibs/log4j-1.2.14.jar"/>
 	<classpathentry kind="lib" path="extlibs/xerces.jar"/>
 	<classpathentry kind="lib" path="extlibs/tools.jar"/>
-	<classpathentry kind="lib" path="extlibs/xml-as-db.jar"/>
+	<classpathentry kind="lib" path="extlibs/xml-as-db-0.9.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
