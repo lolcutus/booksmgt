@@ -1,0 +1,1 @@
+Manage electronic books collection
